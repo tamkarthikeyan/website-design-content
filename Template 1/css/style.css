@@ -214,8 +214,17 @@
     }
 }
 
+.my-4 {
+    margin-top: 1.5rem!important;
+}
 
 
+hr {
+    max-width: 100px;
+    height: 5px;
+    background: #f97946;
+    
+}
 
 .navbarbackgroundcolor {
     background-color: linear-gradient(45deg, #f76b1c 5%, #fad961 100%) !important;
