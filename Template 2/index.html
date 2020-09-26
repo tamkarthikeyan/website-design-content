@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>MSC India | MSC Group</title>
+    <meta name="description" content="MSC Group of India">
+    <meta name="keywords" content="MSC Group of India">
+
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <!--<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <script src="js/bootstrap.js"></script>-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            var str = '#len'; //increment by 1 up to 1-nelemnts
+            $(document).ready(function() {
+                var i, stop;
+                i = 1;
+                stop = 7; //num elements
+                setInterval(function() {
+                    if (i > stop) {
+                        return;
+                    }
+                    $('#len' + (i++)).toggleClass('bounce');
+                }, 500)
+            });
+        });
+
+        $(document).ready(function() {
+            $(document).on('click', '.dropdown-menu', function(e) {
+                e.stopPropagation();
+            });
+            if ($(window).width() < 992) {
+                $('.dropdown-menu a').click(function(e) {
+                    e.preventDefault();
+                    if ($(this).next('.submenu').length) {
+                        $(this).next('.submenu').toggle();
+                    }
+                    $('.dropdown').on('hide.bs.dropdown', function() {
+                        $(this).find('.submenu').hide();
+                    })
+                });
+            }
+
+        });
+
+
+        $(document).ready(function() {
+            // Transition effect for navbar 
+            var offsetHeight = document.getElementById('myVideo').offsetHeight;
+            $(window).on("scroll", function() {
+                if ($(window).scrollTop()) {
+                    $('.navbar').addClass('navbarblack');
+                } else {
+                    $('.navbar').removeClass('navbarblack');
+                }
+
+                if ($(this).scrollTop() > offsetHeight-10) {
+                    $('.navbar').addClass('solid');
+                } else {
+                    $('.navbar').removeClass('solid');
+                }
+                if ($(this).scrollTop() > offsetHeight-10) {
+                    $('.dropdown-menu').removeClass('dropdown-menu-navbarblack');
+                    $('.dropdown-menu').addClass('dropdown-menu-solid');
+                } else {
+                    $('.dropdown-menu').removeClass('dropdown-menu-solid');
+                    $('.dropdown-menu').addClass('dropdown-menu-navbarblack');
+                }
+            });
+        });
+    </script>
+
+    <style type="text/css">
+        .hoverable {
+            display: inline-block;
+            backface-visibility: hidden;
+            vertical-align: middle;
+            position: relative;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            tranform: translateZ(0);
+            transition-duration: .3s;
+            transition-property: transform;
+        }
+
+        .hoverable:before {
+            position: absolute;
+            pointer-events: none;
+            z-index: -1;
+            content: '';
+            top: 100%;
+            left: 5%;
+            height: 10px;
+            width: 90%;
+            opacity: 0;
+            background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+            /* W3C */
+            transition-duration: 0.3s;
+            transition-property: transform, opacity;
+        }
+
+        .hoverable:hover,
+        .hoverable:active,
+        .hoverable:focus {
+            transform: translateY(-5px);
+        }
+
+        .hoverable:hover:before,
+        .hoverable:active:before,
+        .hoverable:focus:before {
+            opacity: 1;
+            transform: translateY(-5px);
+        }
+
+
+
+        @keyframes bounce-animation {
+            16.65% {
+                -webkit-transform: translateY(8px);
+                transform: translateY(8px);
+            }
+
+            33.3% {
+                -webkit-transform: translateY(-6px);
+                transform: translateY(-6px);
+            }
+
+            49.95% {
+                -webkit-transform: translateY(4px);
+                transform: translateY(4px);
+            }
+
+            66.6% {
+                -webkit-transform: translateY(-2px);
+                transform: translateY(-2px);
+            }
+
+            83.25% {
+                -webkit-transform: translateY(1px);
+                transform: translateY(1px);
+            }
+
+            100% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+        }
+
+        .bounce {
+            animation-name: bounce-animation;
+            animation-duration: 2s;
+        }
+
+        @media (max-width: 992px) {
+            .nav-item .submenu {
+                left: 50%;
+            }
+
+            .nav-item .submenu-left {
+                right: 50%;
+            }
+            .nav-container{
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .dropdown-menu .dropdown-toggle:after {
+                border-top: .3em solid transparent;
+                border-right: 0;
+                border-bottom: .3em solid transparent;
+                border-left: .3em solid;
+            }
+
+            .dropdown-menu .dropdown-menu {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .dropdown-menu li {
+                position: relative;
+            }
+
+            .nav-item .submenu {
+                display: none;
+                position: absolute;
+                left: 100%;
+                top: -7px;
+            }
+
+            .nav-item .submenu-left {
+                right: 100%;
+                left: auto;
+            }
+
+            .dropdown-menu>li:hover {
+                background-color: #f1f1f1
+            }
+
+            .dropdown-menu>li:hover>.submenu {
+                display: block;
+            }
+        }
+        
+        @media (min-width: 1200px) { 
+            .nav-container{
+                margin: 0;
+                padding: 0;
+            }
+        
+        }
+
+        nav {
+            transition: 1s;
+        }
+
+
+
+        .dropdown-menu-navbarblack {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .dropdown-menu-solid {
+            background: #666666;
+        }
+
+        .dropdown-item,
+        .navbar-nav,
+        .nav-link {
+            color: rgb(248, 210, 139);
+        }
+
+        .dropdown-item:matches() {
+            background: black;
+            color: burlywood;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(0, 0, 0, 0.253);
+            color: aqua;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-xl navbar-dark navbar-light fixed-top transparent bg-color">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#"><img class="exception_header" src="img/India_logo_min.png" alt="India Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a id="len1" class="nav-link hoverable" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Innovations</a>
+                    <ul class="dropdown-menu dropdown-menu-navbarblack">
+                        <li><a class="dropdown-item" href="#">Product Innovation</a></li>
+                        <li><a class="dropdown-item" href="#">Service Innovation</a></li>
+                        <li><a class="dropdown-item" href="#">Process Innovation</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="len2" class="nav-link hoverable" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Technologies</a>
+                    <ul class="dropdown-menu dropdown-menu-navbarblack">
+                        <li><a class="dropdown-item" href="#"> AI and ML &raquo</a>
+                            <ul class="submenu dropdown-menu dropdown-menu-navbarblack">
+                                <li><a class="dropdown-item" href="#">Deep Learning</a></li>
+                                <li><a class="dropdown-item" href="#">Computer Vision</a></li>
+                                <li><a class="dropdown-item" href="#">Text Analytics and NLP</a></li>
+                                <li><a class="dropdown-item" href="#">Neuromorphic Computing</a></li>
+                                <li><a class="dropdown-item" href="#">Quantum Machine Learning</a></li>
+                                <li><a class="dropdown-item" href="#">Predictive Analysis</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Video and<br>Multimedia</a>
+                            <ul class="submenu dropdown-menu dropdown-menu-navbarblack">
+                                <li><a class="dropdown-item" href="#">Rich Media</a></li>
+                                <li><a class="dropdown-item" href="#">HyperMedia</a></li>
+                                <li><a class="dropdown-item" href="#">Behaviour Analysis</a></li>
+                                <li><a class="dropdown-item" href="#">Gesture Recognition</a></li>
+                                <li><a class="dropdown-item" href="#">Real-Time Vdeo Tracking</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Data Analytics</a>
+                            <ul class="submenu dropdown-menu dropdown-menu-navbarblack">
+                                <li><a class="dropdown-item" href="#">Hadoop: The New Enterprise<br>Data Operating System</a></li>
+                                <li><a class="dropdown-item" href="#">In-Memory Analytics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="len3" class="nav-link hoverable" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                    <ul class="dropdown-menu dropdown-menu-navbarblack">
+                        <li><a class="dropdown-item" href="#">Rapid Prototyping and<br>Solution Engineering</a></li>
+                        <li><a class="dropdown-item" href="#">Applied Research<br>and Development</a></li>
+                        <li><a class="dropdown-item" href="#">Process Automation<br>and Quality Assurance</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="len4" class="nav-link hoverable" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Career</a>
+                    <ul class="dropdown-menu dropdown-menu-navbarblack">
+                        <li><a class="dropdown-item" href="#">Product Innovation</a></li>
+                        <li><a class="dropdown-item" href="#">Service Innovation</a></li>
+                        <li><a class="dropdown-item" href="#">Process Innovation</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="len5" class="nav-link hoverable" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+                    <ul class="dropdown-menu dropdown-menu-navbarblack">
+                        <li><a class="dropdown-item" href="#">Messages from Leaders</a></li>
+                        <li><a class="dropdown-item" href="#">Focus And Strength</a></li>
+                        <li><a class="dropdown-item" href="#">Company Profile</a></li>
+                        <li><a class="dropdown-item" href="#">News</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="len6" class="nav-link hoverable" href="#">Contact Us</a>
+                </li>
+            </ul>
+            <form id="len7" class="form-inline my-2 my-lg-0 hoverable" action="#">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        </div>
+    </nav>
+
+    <div id="myVideo">
+        <video autoplay muted loop style="height: 100%; width: 100%;">
+            <source src="media/header.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <section style="height: 100vh; margin: auto; inset: 0px auto auto 0px; box-sizing: border-box; width: 100%;">
+        <div class="container pt-5">
+            <h3>Collapsible Navbar</h3>
+            <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).</p>
+            <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+            <p>Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.</p>
+        </div>
+        <div class="container">
+            <h3>Collapsible Navbar</h3>
+            <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).</p>
+            <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+            <p>Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.</p>
+        </div>
+        <div class="container">
+            <h3>Collapsible Navbar</h3>
+            <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).</p>
+            <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+            <p>Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.</p>
+        </div>
+        <div class="container">
+            <h3>Collapsible Navbar</h3>
+            <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).</p>
+            <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+            <p>Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div>Copyrights © 2018 All Rights Reserved by MSC Group Software and Systems India Pvt. Ltd.</div>
+    </footer>
+
+
+</body></html>
