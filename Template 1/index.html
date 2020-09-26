@@ -20,6 +20,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/pace.min.js"></script>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
     <script type="text/javascript">
         $(function() {
             var str = '#len'; //increment by 1 up to 1-nelemnts
@@ -53,7 +56,6 @@
             }
 
         });
-
     </script>
 
     <style type="text/css">
@@ -220,6 +222,37 @@
             text-align: center;
         }
 
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            margin-top: -80px;
+            background-size: 50%, 50%;
+            background-image: none;
+        }
+
+        .carousel-control-next-icon:after {
+            content: '>';
+            font-size: 55px;
+            color: red;
+        }
+
+        .carousel-control-prev-icon:after {
+            content: '<';
+            font-size: 55px;
+            color: red;
+        }
+
+        i .card-body,
+        .fas, .far {
+            position: absolute;
+            font-size: 6em;
+            display: inline-block;
+            /*border-radius: 50px;
+            box-shadow: 0px 0px 5px #f97946;
+            padding: 0.5em 0.5em;*/
+            color: #fbbea569;
+            margin-top: -70px;
+            margin-left: -85px;
+        }
     </style>
 
 </head>
@@ -326,51 +359,57 @@
                 <div class="containt-mydiv">
                     <div class="row">
 
-                        <div class="col containt-mydiv">
+                        <div class="col pt-5">
                             <h5>MSC Group India is founded on the philosophy of constant innovation that allows for creativity and engineering excellence to support our customers.</h5>
+                            <hr class="my-4" style="height: 2px;" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 pt-1">
                             <img alt="model-1" src="img/model-1.svg" width="100%" />
                         </div>
-                        <div class="col-md-6  pt-5">
+                        <div class="col-md-6  pt-3">
                             <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <div class="card mb-3" style="max-width: 540px;">
-                                            <div class="row no-gutters">
-                                                <div class="col-md-4">
-                                                    <img src="..." class="card-img" alt="...">
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Card title</h5>
-                                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                                    </div>
-                                                </div>
+                                        <div class="card" style="margin:0 50px 0 50px;">
+                                            <div class="card-body" style="text-align: left">
+                                                <h6 class="card-title mx-auto w-100">Product Innovation</h6>
+                                                <div class="text-right"><i class="fas fa-desktop"></i></div>
+                                                <p class="card-text" style="text-align: justify">In our line of work, technology is one of the catalytic elements of innovation. Into the new millennium and beyond, innovation has become a directed effort and our company focuses on technology revolutions to innovate for market.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Special title treatment</h5>
-                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <div class="card" style="margin:0 50px 0 50px;">
+                                            <div class="card-body" style="text-align: left">
+                                                <h6 class="card-title">Service Innovation</h6>
+                                                <div class="text-right"><i class="far fa-eye"></i></div>
+                                                <p class="card-text" style="text-align: justify">Service innovation forms the foundational structure to stay aligned to our customer expectations. While we are a software and systems design and development house, we focus on aligning our activities along a pre-defined set of services.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Special title treatment</h5>
-                                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <div class="card" style="margin:0 50px 0 50px;">
+                                            <div class="card-body" style="text-align: left">
+                                               
+                                                <h6 class="card-title">Process Innovation</h6>
+                                                <div class="text-right"><i class="fas fa-flask"></i></div>
+                                               
+                                                <p class="card-text" style="text-align: justify">Product and Service innovations define “what we do” that would help our customer reach their market objectives. On the other hand, Process innovation is all about “how we do.”</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <a class="carousel-control-next" href="#carouselExampleCaptions" data-slide="next">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-prev" href="#carouselExampleCaptions" data-slide="prev" style="margin-left: -20px;">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -391,7 +430,4 @@
 <script type="text/javascript">
     FastClick.attach(document.body);
     $('#fullpage').fullpage();
-
-</script>
-
-</html>
+</script></html>
