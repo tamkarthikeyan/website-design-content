@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/pace.min.js"></script>
+
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -27,7 +27,7 @@
 
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.css">
-    
+
     <link rel="stylesheet" href="css/aos.css" />
 
 
@@ -72,29 +72,17 @@
             $(window).on("scroll", function() {
                 if ($(window).scrollTop()) {
                     $('.navbar').addClass('navbarblack');
-                    $('.search-button').addClass('btn-outline-info');
                     $('.navbar').addClass('navbar-dark');
                     $('.navbar-toggler-icon').addClass('navbar-dark');
                 } else {
                     $('.navbar').removeClass('navbarblack');
-                    //$('.navbar-toggler-icon').removeClass('navbar-light');
-                    //$('.search-button').removeClass('btn-outline-info');
                 }
 
                 if ($(this).scrollTop() > offsetHeight - 10) {
                     $('.navbar').removeClass('navbarblack');
                     $('.navbar').addClass('solid');
-                    $('.search-button').removeClass('btn-outline-info');
-                    $('.search-button').addClass('btn-outline-danger');
-                    $('.navbar').removeClass('navbar-dark');
-                    $('.navbar').addClass('navbar-light');
-                    $('.navbar-toggler-icon').removeClass('navbar-dark');
-                    $('.navbar-toggler-icon').addClass('navbar-light');
                 } else {
                     $('.navbar').removeClass('solid');
-                    $('.search-button').removeClass('btn-outline-danger');
-                    $('.navbar').removeClass('navbar-light');
-                    $('.navbar-toggler-icon').removeClass('navbar-light');
                 }
                 if ($(this).scrollTop() > offsetHeight - 10) {
                     $('.dropdown-menu').removeClass('dropdown-menu-navbarblack');
@@ -202,6 +190,10 @@
                 margin: 0;
                 padding: 0;
             }
+            .video-padding-top{
+                background: black; 
+                padding-top: 82px;
+            }
         }
 
         @media (min-width: 992px) {
@@ -287,7 +279,7 @@
 
         hr {
             height: 5px;
-            background: #f97946;
+            background: #9e9e9e;
 
         }
 
@@ -384,7 +376,7 @@
         .nav-tabs .nav-link.active {
             font-weight: bold;
             background-color: transparent;
-            border-bottom: 3px solid #f97946;
+            border-bottom: 3px solid #9e9e9e;
             border-right: none;
             border-left: none;
             border-top: none;
@@ -393,7 +385,7 @@
 
 
         .nav-tabs .nav-link {
-            color: #f97946;
+            color: #9e9e9e;
             font-weight: bold;
         }
 
@@ -431,7 +423,7 @@
 
         .tech-single:hover {
             transition: all 0.3s ease-in;
-            background: linear-gradient(45deg, #f76b1c, #fad961);
+            background: linear-gradient(45deg, #000000, #9e9e9e);
             color: #fff;
         }
 
@@ -490,7 +482,7 @@
 
         .nav-item,
         .nav-link:hover {
-            color: black;
+            color: #666666;
         }
 
     </style>
@@ -574,7 +566,7 @@
             </ul>
             <form id="len7" class="form-inline my-2 my-lg-0 hoverable" action="#">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="search-button btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
 
@@ -583,7 +575,7 @@
 
 
 
-    <header>
+    <header class="video-padding-top">
         <div id="myVideo">
             <video autoplay muted loop style="height: 100%; width: 100%;">
                 <source src="media/header.mp4" type="video/mp4">
@@ -596,45 +588,45 @@
 
     <section>
         <div class="container pt-5">
-            <div class="row pt-5 pb-5">
-                <div class="col-md-6 pt-4" data-aos="flip-down">
+            <div class="row pt-5 pb-5 mb-5">
+                <div class="col-md-6 pt-4 mb-5" data-aos="flip-down">
                     <img alt="model-1" src="img/model-1.svg" width="100%" />
                 </div>
-                <div class="col-md-6 text-justify align-self-center pt-5" data-aos="zoom-in">
+                <div class="col-md-6 text-justify align-self-center pt-5 mb-5" data-aos="zoom-in">
                     <h5 style="text-align: center; line-height: 170%">MSC Group India is founded on the philosophy of constant innovation that allows for creativity and engineering excellence to support our customers.</h5>
                     <hr class="my-4" style="height: 2px; width: 100px;" />
                 </div>
-                <div class="row mt-5 pt-5 pb-5" data-aos="fade-right">
-                    <div class="col-md-4">
-                        <div class="card cardtt card_red text-center" style="margin:30px 10px 30px 10px;">
-                            <div style="">
-                                <i class="fas fa-desktop icon-fa" aria-hidden="true"></i>
-                                <h6 class="card-title mx-auto w-100"><b>PRODUCT INNOVATION</b></h6>
-                                <p class="card-text para-white" style="text-align: justify">In our line of work, technology is one of the catalytic elements of innovation. Into the new millennium and beyond, innovation has become a directed effort and our company focuses on technology revolutions to innovate for market.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="slide-up">
-                        <div class="card cardtt card_violet text-center" style="margin:30px 10px 30px 10px;">
-                            <div style=" ">
-                                <i class="far fa-eye icon-fa" aria-hidden="true"></i>
-                                <h6 class="card-title"><b>SERVICE INNOVATION</b></h6>
-                                <p class="card-text para-white" style="text-align: justify">Service innovation forms the foundational structure to stay aligned to our customer expectations. While we are a software and systems design and development house, we focus on aligning our activities along a pre-defined set of services.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-left">
-                        <div class="card cardtt card_three text-center" style="margin: 30px 10px 30px 10px;">
-                            <div style="">
-                                <i class="fas fa-flask icon-fa" aria-hidden="true"></i>
 
-                                <h6 class="card-title"><b>PROCESS INNOVATION</b></h6>
-                                <p class="card-text para-white" style="text-align: justify">Product and Service innovations define “what we do” that would help our customer reach their market objectives. On the other hand, Process innovation is all about “how we do.”</p>
-                            </div>
+                <div class="col-md-4" data-aos="slide-up">
+                    <div class="card cardtt card_red text-center" style="margin:30px 10px 30px 10px;">
+                        <div style="">
+                            <i class="fas fa-desktop icon-fa" aria-hidden="true"></i>
+                            <h6 class="card-title mx-auto w-100"><b>PRODUCT INNOVATION</b></h6>
+                            <p class="card-text para-white" style="text-align: justify">In our line of work, technology is one of the catalytic elements of innovation. Into the new millennium and beyond, innovation has become a directed effort and our company focuses on technology revolutions to innovate for market.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="slide-up">
+                    <div class="card cardtt card_violet text-center" style="margin:30px 10px 30px 10px;">
+                        <div style=" ">
+                            <i class="far fa-eye icon-fa" aria-hidden="true"></i>
+                            <h6 class="card-title"><b>SERVICE INNOVATION</b></h6>
+                            <p class="card-text para-white" style="text-align: justify">Service innovation forms the foundational structure to stay aligned to our customer expectations. While we are a software and systems design and development house, we focus on aligning our activities along a pre-defined set of services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="slide-up">
+                    <div class="card cardtt card_three text-center" style="margin: 30px 10px 30px 10px;">
+                        <div style="">
+                            <i class="fas fa-flask icon-fa" aria-hidden="true"></i>
+
+                            <h6 class="card-title"><b>PROCESS INNOVATION</b></h6>
+                            <p class="card-text para-white" style="text-align: justify">Product and Service innovations define “what we do” that would help our customer reach their market objectives. On the other hand, Process innovation is all about “how we do.”</p>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -662,7 +654,7 @@
                             </div>
                         </nav>
                         <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="pop1" role="tabpanel" aria-labelledby="pop1-tab" >
+                            <div class="tab-pane fade show active" id="pop1" role="tabpanel" aria-labelledby="pop1-tab">
                                 <div class="row pb-5 mt-5">
                                     <div class="col-md-6">
                                         <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-right">
@@ -744,7 +736,7 @@
                                             <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
                                         </div>
                                     </div>
-                                    <div class="col-md-6" >
+                                    <div class="col-md-6">
                                         <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-left">
                                             <h5><i class="fas fa-layer-group pr-3"></i>In-Memory Analytics</h5>
                                             <p class="para-black">The use of in-memory databases to speed up analytic processing is increasingly popular and highly beneficial in enterprise data analytics.</p>
@@ -778,7 +770,7 @@
                     </div>
                 </div>
                 <div class="row pb-5">
-                    <div class="col-md-4" data-aos="fade-right">
+                    <div class="col-md-4" data-aos="flip-right">
                         <div class="">
                             <div class="card cardbt card_red text-center" style="margin:30px 10px 30px 10px;">
                                 <div>
@@ -800,7 +792,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" data-aos="fade-left">
+                    <div class="col-md-4" data-aos="flip-left">
                         <div class="">
                             <div class="card cardbt card_three text-center" style="margin: 30px 10px 30px 10px;">
                                 <div>
@@ -819,18 +811,18 @@
     <section>
         <div class="container pb-5 pt-5">
             <div class="row pb-5 pt-5">
-                <div class="col text-center" data-aos="zoom-in">
+                <div class="col-md-12 text-center mb-5" data-aos="zoom-in">
                     <h4>INAUGURATION</h4>
                     <hr class="my-4" style="height: 2px; width: 100px;" />
                 </div>
-                <div class="row pl-3 pr-3">
-                    <div class="col-md-6 pt-4 " data-aos="fade-right">
-                        <img src="img/members.png" class="img-fluid" alt="members">
-                    </div>
-                    <div class="col-md-6 pt-4 align-self-center" data-aos="fade-left">
-                        <p class="tech-para-gray">Inauguration held on 30th of July, 2018. On this special occasion the Chairman and CEO Akihiro Nakamura, President and COO Aroumougam B and Director and CTO Yasuro Hasegawa were present along with Indian headquater Staff members.</p>
-                    </div>
+
+                <div class="col-md-6" data-aos="flip-right">
+                    <img src="img/members.png" class="img-fluid" alt="members">
                 </div>
+                <div class="col-md-6 align-self-center" data-aos="flip-left">
+                    <p class="tech-para-gray">Inauguration held on 30th of July, 2018. On this special occasion the Chairman and CEO Akihiro Nakamura, President and COO Aroumougam B and Director and CTO Yasuro Hasegawa were present along with Indian headquater Staff members.</p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -838,31 +830,31 @@
     <section style="background: #f5f5f5;">
         <div class="container pt-5 pb-5">
             <div class="row pt-5 pb-5">
-                <div class="col text-center" data-aos="zoom-in">
+                <div class="col-md-12 text-center mb-5" data-aos="zoom-in">
                     <h4>RECRUITMENT DRIVE: WALK IN AND TRAVEL TO JAPAN</h4>
                     <hr class="my-4" style="height: 2px; width: 100px;" />
                 </div>
-                <div class="row mt-4 pb-5 pl-3 pr-3">
-                    <div class="col-md-6 align-self-center" data-aos="fade-right">
-                        <p class="tech-para-gray">MSC Group Software and Systems India Pvt Ltd, Bangalore are looking for IT Professionals who have excellent technical skills in, but not limited to, .Net, Java, CAD/CAE Matlab/Simulink, Japanese Translators and are willing to travel to Japan as and when required by the organization. Japanese Bilingual Engineers with strong knowledge in any programming language have an excellent opportunity at MSC Group Software and Systems India Pvt Ltd., Bangalore.</p>
-                        <a href="#"><button type="button" class="btn btn-outline-warning mt-3 mb-5">READ MORE</button></a>
-                    </div>
-                    <div class="col-md-6 align-self-center" data-aos="fade-left">
-                        <img src="img/business_people.jpg" class="img-fluid" alt="business_people">
-                    </div>
+
+                <div class="col-md-6 align-self-center" data-aos="flip-right">
+                    <p class="tech-para-gray">MSC Group Software and Systems India Pvt Ltd, Bangalore are looking for IT Professionals who have excellent technical skills in, but not limited to, .Net, Java, CAD/CAE Matlab/Simulink, Japanese Translators and are willing to travel to Japan as and when required by the organization. Japanese Bilingual Engineers with strong knowledge in any programming language have an excellent opportunity at MSC Group Software and Systems India Pvt Ltd., Bangalore.</p>
+                    <a href="#"><button type="button" class="btn btn-outline-dark mt-3 mb-5">READ MORE</button></a>
+                </div>
+                <div class="col-md-6 align-self-center" data-aos="flip-left">
+                    <img src="img/business_people.jpg" class="img-fluid" alt="business_people">
                 </div>
             </div>
+
         </div>
     </section>
 
 
 
-    <section >
+    <section>
         <div class="container mt-5" data-aos="zoom-in">
-            <div class="row align-items-center" >
+            <div class="row align-items-center">
                 <div class="col-md-12">
-                    <h4 class="text-center mt-5 mb-5" >MSC Group Companies</h4>
-                    <div id="owl-demo" class="owl-carousel owl-theme mb-3" >
+                    <h4 class="text-center mt-5 mb-5">MSC Group Companies</h4>
+                    <div id="owl-demo" class="owl-carousel owl-theme mb-3">
                         <div class="item align-self-center">
                             <a href="#" style="text-decoration: none;">
                                 <div class="circle" style="background: linear-gradient(45deg, #f76b1c 0%, #fad961 100%);">
@@ -1006,18 +998,18 @@
     <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content text-center" style="background: #333333">
-                <h5 class="modal-title text-center p-3" id="exampleModalLongTitle" style="color: white; border-bottom: 3px solid #f97946;">MSC GROUP INTRODUCTION</h5>
+                <h5 class="modal-title text-center p-3" id="exampleModalLongTitle" style="color: white; border-bottom: 3px solid #000000;">MSC GROUP INTRODUCTION</h5>
 
                 <video class="embed-responsive embed-responsive-16by9" poster="" preload="none" controls="" muted="">
                     <source type="video/mp4" src="media/MSC_movie.mp4">
                 </video>
-                <p class="pt-3" style="color: white; border-top: 3px solid #f97946;">We introduce the main solutions of MSC group companies.</p>
+                <p class="pt-3" style="color: white; border-top: 3px solid #000000;">We introduce the main solutions of MSC group companies.</p>
             </div>
         </div>
     </div>
 
     <footer>
-        <div class="container-fluid pt-4 pb-4" style="background: linear-gradient(180deg, #fad961 5%, #f76b1c 100%)">
+        <div class="container-fluid pt-4 pb-4" style="background: linear-gradient(180deg, #666666 , #000000);">
 
             <div class="row">
                 <div class="col-md-4" data-aos="slide-up">
@@ -1118,7 +1110,7 @@
                 </li>
             </ul>
         </div>
-        <div class="text-center pt-4 pb-4" style="background: #f76b1c; color: white;">Copyrights © 2018 - 2020. All Rights Reserved by MSC Group Software and Systems India Pvt. Ltd.</div>
+        <div class="text-center pt-4 pb-4" style="background: black; color: white;">Copyrights © 2018 - 2020. All Rights Reserved by MSC Group Software and Systems India Pvt. Ltd.</div>
     </footer>
 </body>
 <script src="js/owl.carousel.min.js"></script>
