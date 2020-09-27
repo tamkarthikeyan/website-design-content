@@ -1,20 +1,29 @@
 //First-loading-content
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 0px;
+    height: 0px;
+}
 
 .lds-ellipsis {
     display: inline-block;
-    position: relative;
+    position: fixed;
     width: 80px;
     height: 80px;
+    top: 50%;
+    left: 48.5%;
 }
 
 .lds-ellipsis div {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 33px;
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background: #3efeb1;
+    background: black;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 
