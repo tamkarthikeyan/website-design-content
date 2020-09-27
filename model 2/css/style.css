@@ -107,18 +107,40 @@
 
 /*-------------------------owl----------------*/
 #owl-demo .item {
-    padding: 30px 5px;
+    padding: 10px 5px 10px 5px;
     margin: 2px;
     color: #FFF;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
     text-align: center;
-
+    text-align: justify;
 }
 
 .item:hover {
     transform: scale(1.1);
+}
+
+#owl-one .item-one {
+    padding: 0px 20px 0px 0px;
+    margin: 2px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    text-align: justify;
+}
+
+#owl-two .item-two {
+    padding: 0px 20px 0px 0px;
+    margin: 2px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    text-align: justify;
 }
 
 .customNavigation {

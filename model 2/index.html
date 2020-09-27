@@ -190,8 +190,9 @@
                 margin: 0;
                 padding: 0;
             }
-            .video-padding-top{
-                background: black; 
+
+            .video-padding-top {
+                background: black;
                 padding-top: 82px;
             }
         }
@@ -292,85 +293,26 @@
             min-width: 230px;
             height: auto;
             overflow: hidden;
-            border-radius: 15px;
             margin: 0 auto;
             padding: 40px 20px;
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
             transition: .5s;
         }
 
-        .cardbt:hover {
+        .btn-hover:hover {
             transform: scale(1.1);
         }
 
-        .cardtt {
-            position: relative;
-            min-width: 230px;
-            height: auto;
-            overflow: hidden;
-            border-radius: 15px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-            transition: .5s;
-        }
-
-        .cardtt:hover {
-            transform: scale(1.1);
-        }
-
-        .card_red,
-        .card_red .title .icon-fa {
-            background: linear-gradient(-45deg, #ffec61, #f321d7);
-        }
-
-        .card_violet,
-        .card_violet .title .icon-fa {
-            background: linear-gradient(-45deg, #f403d1, #64b5f6);
-        }
-
-        .card_three,
-        .card_three .title .icon-fa {
-            background: linear-gradient(-45deg, #24ff72, #9a4eff);
-        }
-
-        .card_org,
-        .card_org .title .icon-fa {
-            background: linear-gradient(-45deg, #fff051 0%, #f97946 100%);
-        }
-
-        .cardtt:before {
+        .card-text:before {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 40%;
+            bottom: 110px;
+            left: 10%;
+            width: 75%;
+            height: 50%;
             background: rgba(255, 255, 255, .1);
             z-index: 1;
             transform: skewY(-5deg) scale(1.5);
-        }
-
-        .title,
-        .icon-fa {
-            color: #fff;
-            font-size: 60px;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 100px;
-            box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
-        }
-
-        .title,
-        h6,
-        .para-white {
-            position: relative;
-            margin: 20px 0 0;
-            padding: 0;
-            color: #fff;
-            z-index: 2;
         }
 
         .nav-tabs .nav-link.active {
@@ -412,8 +354,8 @@
             opacity: 0.8;
         }
 
-        .tech-single:hover h5,
-        .tech-single:hover span,
+        .tech-single:hover h6,
+        .tech-single:hover button,
         .tech-single:hover a,
         .tech-single:hover .para-black {
             transition: all 0.3s ease-in;
@@ -423,7 +365,7 @@
 
         .tech-single:hover {
             transition: all 0.3s ease-in;
-            background: linear-gradient(45deg, #000000, #9e9e9e);
+            background: linear-gradient(45deg, #9e9e9e, #000000);
             color: #fff;
         }
 
@@ -442,7 +384,7 @@
             vertical-align: middle;
             -webkit-transition-duration: .3s;
             transition-duration: .3s;
-            color: #1A2C79;
+            color: white;
         }
 
 
@@ -483,6 +425,37 @@
         .nav-item,
         .nav-link:hover {
             color: #666666;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            margin-top: -80px;
+            background-size: 50%, 50%;
+            background-image: none;
+        }
+
+        .carousel-control-next-icon:after {
+            content: '>';
+            font-size: 55px;
+            color: black;
+        }
+
+        .carousel-control-prev-icon:after {
+            content: '<';
+            font-size: 55px;
+            color: black;
+        }
+
+        .icon-rt {
+            position: absolute;
+            font-size: 6em;
+            display: inline-block;
+            /*border-radius: 50px;
+            box-shadow: 0px 0px 5px #f97946;
+            padding: 0.5em 0.5em;*/
+            color: rgba(123, 123, 121, 0.2);
+            margin-top: -70px;
+            margin-left: -85px;
         }
 
     </style>
@@ -586,7 +559,7 @@
 
 
 
-    <section>
+    <!--<section>
         <div class="container pt-5">
             <div class="row pt-5 pb-5 mb-5">
                 <div class="col-md-6 pt-4 mb-5" data-aos="flip-down">
@@ -628,6 +601,63 @@
             </div>
 
         </div>
+    </section>-->
+
+    <section>
+        <div class="container">
+            <div class="row mb-5 pb-5 mt-5">
+                <div class="col-md-12 pt-5 mt-5" data-aos="zoom-in">
+                    <h5>MSC Group India is founded on the philosophy of constant innovation that allows for creativity and engineering excellence to support our customers.</h5>
+                    <hr class="my-4" style="height: 2px; width: 100px;" />
+                </div>
+                <div class="col-md-5 mt-5 mb-5 align-self-center" data-aos="flip-down">
+                    <img alt="model-1" src="img/model-1.svg" width="100%" style="filter: grayscale(80%);" />
+                </div>
+                <div class="col-md-7  mt-5 mb-5" data-aos="slide-up">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card" style="margin:0 50px 0 50px;">
+                                    <div class="card-body" style="text-align: left">
+                                        <h6 class="card-title para-black"><b>PRODUCT INNOVATION</b></h6>
+                                        <div class="text-right"><i class="fas fa-desktop icon-rt"></i></div>
+                                        <p class="para-black">In our line of work, technology is one of the catalytic elements of innovation. Into the new millennium and beyond, innovation has become a directed effort and our company focuses on technology revolutions to innovate for market.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card" style="margin:0 50px 0 50px;">
+                                    <div class="card-body" style="text-align: left">
+                                        <h6 class="card-title para-black"><b>SERVICE INNOVATION</b></h6>
+                                        <div class="text-right"><i class="far fa-eye icon-rt"></i></div>
+                                        <p class="para-black">Service innovation forms the foundational structure to stay aligned to our customer expectations. While we are a software and systems design and development house, we focus on aligning our activities along a pre-defined set of services.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card" style="margin:0 50px 0 50px;">
+                                    <div class="card-body" style="text-align: left">
+
+                                        <h6 class="card-title para-black"><b>PROCESS INNOVATION</b></h6>
+                                        <div class="text-right"><i class="fas fa-flask icon-rt"></i></div>
+
+                                        <p class="para-black">Product and Service innovations define “what we do” that would help our customer reach their market objectives. On the other hand, Process innovation is all about “how we do.”</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleCaptions" data-slide="prev" style="margin-left: -20px;">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleCaptions" data-slide="next">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
 
@@ -645,104 +675,108 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <nav class="nav-justified " data-aos="slide-up">
-                            <div class="nav nav-tabs text-center " id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="pop1-tab" data-toggle="tab" href="#pop1" role="tab" aria-controls="pop1" aria-selected="true">AI and ML</a>
-                                <a class="nav-item nav-link" id="pop2-tab" data-toggle="tab" href="#pop2" role="tab" aria-controls="pop2" aria-selected="false">VIDEO AND MULTIMEDIA</a>
-                                <a class="nav-item nav-link" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab" aria-controls="pop3" aria-selected="false">DATA ANALYTICS</a>
-                            </div>
-                        </nav>
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="pop1" role="tabpanel" aria-labelledby="pop1-tab">
-                                <div class="row pb-5 mt-5">
-                                    <div class="col-md-6">
-                                        <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-right">
-                                            <h5><i class="fas fa-desktop pr-3"></i>Deep Learning</h5>
-                                            <p>One example of deep learning is the artificial neural network (ANN) which is based on an idea of how our human brain works. ANN finds common patterns from given data and predicts the best result.</p>
-                                            <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                        <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-right">
-                                            <h5><i class="far fa-eye pr-3"></i>Computer Vision</h5>
-                                            <p>The applications of computer vision are numerous and include: autonomous vehicles, character recognition, security and surveillance, biometrics and forensics.</p>
-                                            <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                        <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-right">
-                                            <h5><i class="far fa-star pr-3"></i>Quantum Machine Learning</h5>
-                                            <p>Quantum machine learning is an emerging interdisciplinary research area at the intersection of quantum physics and machine learning. </p>
-                                            <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-left">
-                                            <h5><i class="fas fa-layer-group pr-3"></i>Neuromorphic Computing</h5>
-                                            <p>Neuromorphic Computing type of approach can make technologies more versatile and adaptable, and promote more vibrant results than other types of traditional architectures .</p>
-                                            <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                        <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-left">
-                                            <h5><i class="fas fa-power-off pr-3"></i>Text analytics and NLP</h5>
-                                            <p>NLP addresses tasks such as identifying sentence boundaries in documents, extracting relationships from documents, and searching and retrieving of documents, among others.</p>
-                                            <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                        <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-left">
-                                            <h5><i class="fas fa-anchor pr-3"></i>Predictive Analysis</h5>
-                                            <p>Predictive analytics is a form of advanced analytics that uses both new and historical data to forecast activity, behavior and trends. </p>
-                                            <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-
-                                    </div>
-
+                    <div class="col-md-12" data-aos="zoom-in">
+                        <h5 class="text-center">AI and ML</h5>
+                        <div id="owl-one" class="owl-carousel owl-theme mb-3">
+                            <div class="item-one">
+                                <div class="col-12 m-4 pb-3 pt-3 shadow white-bg-tech tech-single" data-aos="flip-right">
+                                    <h5><i class="fas fa-desktop pr-3"></i>Deep Learning</h5>
+                                    <p>One example of deep learning is the artificial neural network (ANN) which is based on an idea of how our human brain works. ANN finds common patterns from given data and predicts the best result.</p>
+                                    <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="pop2" role="tabpanel" aria-labelledby="pop2-tab">
-                                <div class="row pb-5 mt-5">
-                                    <div class="col-md-6">
-                                        <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-right">
-                                            <h5><i class="fas fa-desktop pr-3"></i>Rich Media</h5>
-                                            <p> A successful rich media presentation will be interesting, informative, and easily accessed by any user.</p>
-                                            <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                        <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-right">
-                                            <h5><i class="far fa-eye pr-3"></i>Hyper Media</h5>
-                                            <p>HyperMedia, used in online multimedia presentations such as rich media, refers to the hyperlinks embedded in visual media. </p>
-                                            <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                        <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-right">
-                                            <h5><i class="far fa-star pr-3"></i>Behaviour Analysis</h5>
-                                            <p>One of the key analyses of an input video for deriving beneficial applications is behaviour analysis. </p>
-                                            <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-left">
-                                            <h5><i class="fas fa-layer-group pr-3"></i>Gesture Recognition</h5>
-                                            <p> Gesture is a type of perceptual computing which allows user to execute commands based on the gestures recognized by the devices they wish to operate.</p>
-                                            <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                        <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-left">
-                                            <h5><i class="fas fa-power-off pr-3"></i>Real-Time Video Tracking</h5>
-                                            <p>Video tracking is the process of locating a moving object (or multiple objects) over time using a camera. </p>
-                                            <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                    </div>
+                            <div class="item-one">
+                                <div class="col-12 m-4 pb-3 pt-3 shadow white-bg-tech tech-single" data-aos="flip-left">
+                                    <h5><i class="far fa-eye pr-3"></i>Computer Vision</h5>
+                                    <p>The applications of computer vision are numerous and include: autonomous vehicles, character recognition, security and surveillance, biometrics and forensics.</p>
+                                    <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="pop3" role="tabpanel" aria-labelledby="pop3-tab">
-                                <div class="row pb-5 mt-5">
-                                    <div class="col-md-6">
-                                        <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-right">
-                                            <h5><i class="fas fa-desktop pr-3"></i>HADOOP:The New Enterprise Data Operating System</h5>
-                                            <p class="para-black">Hadoop is a framework and set of tools for processing very large data sets and originally designed to work on clusters of physical machines.</p>
-                                            <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="col pb-3 pt-3 mb-3 shadow-sm white-bg-tech tech-single" data-aos="flip-left">
-                                            <h5><i class="fas fa-layer-group pr-3"></i>In-Memory Analytics</h5>
-                                            <p class="para-black">The use of in-memory databases to speed up analytic processing is increasingly popular and highly beneficial in enterprise data analytics.</p>
-                                            <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                    </div>
+                            <div class="item-one">
+                                <div class="col-12 m-4 pb-3 pt-3 shadow white-bg-tech tech-single" data-aos="flip-right">
+                                    <h5><i class="far fa-star pr-3"></i>Quantum Machine Learning</h5>
+                                    <p>Quantum machine learning is an emerging interdisciplinary research area at the intersection of quantum physics and machine learning. </p>
+                                    <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="item-one">
+                                <div class="col-12 m-4 pb-3 pt-3 shadow white-bg-tech tech-single" data-aos="flip-left">
+                                    <h5><i class="fas fa-layer-group pr-3"></i>Neuromorphic Computing</h5>
+                                    <p>Neuromorphic Computing type of approach can make technologies more versatile and adaptable, and promote more vibrant results than other types of traditional architectures .</p>
+                                    <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="item-one">
+                                <div class="col-12 m-4 pb-3 pt-3 shadow white-bg-tech tech-single" data-aos="flip-right">
+                                    <h5><i class="fas fa-power-off pr-3"></i>Text analytics and NLP</h5>
+                                    <p>NLP addresses tasks such as identifying sentence boundaries in documents, extracting relationships from documents, and searching and retrieving of documents, among others.</p>
+                                    <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="item-one">
+                                <div class="col-12 m-4 pb-3 pt-3 shadow white-bg-tech tech-single" data-aos="flip-left">
+                                    <h5><i class="fas fa-anchor pr-3"></i>Predictive Analysis</h5>
+                                    <p>Predictive analytics is a form of advanced analytics that uses both new and historical data to forecast activity, behavior and trends. </p>
+                                    <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12" data-aos="zoom-in" style="margin-top: -50px; background: #f5f5f5;">
+                        <h5 class="text-center ">VIDEO AND MULTIMEDIA</h5>
+                        <div id="owl-two" class="owl-carousel owl-theme mb-3">
+                            <div class="item-two">
+                                <div class="col-12 m-4 pb-3 pt-3 shadow white-bg-tech tech-single" data-aos="flip-right">
+                                    <h5><i class="fas fa-desktop pr-3"></i>Rich Media</h5>
+                                    <p> A successful rich media presentation will be interesting, informative, and easily accessed by any user.</p>
+                                    <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="item-two">
+                                <div class="col-12 m-4 pb-3 pt-3 shadow white-bg-tech tech-single" data-aos="flip-right">
+                                    <h5><i class="far fa-eye pr-3"></i>Hyper Media</h5>
+                                    <p>HyperMedia, used in online multimedia presentations such as rich media, refers to the hyperlinks embedded in visual media. </p>
+                                    <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="item-two">
+                                <div class="col-12 m-4 pb-3 pt-3 shadow white-bg-tech tech-single" data-aos="flip-right">
+                                    <h5><i class="far fa-star pr-3"></i>Behaviour Analysis</h5>
+                                    <p>One of the key analyses of an input video for deriving beneficial applications is behaviour analysis. </p>
+                                    <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="item-two">
+                                <div class="col-12 m-4 pb-3 pt-3 shadow white-bg-tech tech-single" data-aos="flip-left">
+                                    <h5><i class="fas fa-layer-group pr-3"></i>Gesture Recognition</h5>
+                                    <p> Gesture is a type of perceptual computing which allows user to execute commands based on the gestures recognized by the devices they wish to operate.</p>
+                                    <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="item-two">
+                                <div class="col-12 m-4 pb-3 pt-3 shadow white-bg-tech tech-single" data-aos="flip-left">
+                                    <h5><i class="fas fa-power-off pr-3"></i>Real-Time Video Tracking</h5>
+                                    <p>Video tracking is the process of locating a moving object (or multiple objects) over time using a camera. </p>
+                                    <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12" data-aos="zoom-in" style="margin-top: -50px; background: #f5f5f5;">
+                        <h5 class="text-center ">DATA ANALYTICS</h5>
+                        <div class="row pb-5 mt-5">
+                            <div class="col-md-6">
+                                <div class="col pb-3 pt-3 mb-3 shadow white-bg-tech tech-single" data-aos="flip-right">
+                                    <h5><i class="fas fa-desktop pr-3"></i>HADOOP:The New Enterprise Data Operating System</h5>
+                                    <p class="para-black">Hadoop is a framework and set of tools for processing very large data sets and originally designed to work on clusters of physical machines.</p>
+                                    <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col pb-3 pt-3 mb-3 shadow white-bg-tech tech-single" data-aos="flip-left">
+                                    <h5><i class="fas fa-layer-group pr-3"></i>In-Memory Analytics</h5>
+                                    <p class="para-black">The use of in-memory databases to speed up analytic processing is increasingly popular and highly beneficial in enterprise data analytics.</p>
+                                    <a href="#" target="_blank" class="detail-link mt-2">Read more <span><i class="fas fa-arrow-right"></i></span></a>
                                 </div>
                             </div>
                         </div>
@@ -760,49 +794,39 @@
 
 
 
-    <section style="background-image: url(img/model-3.svg); background-position: top; background-repeat: no-repeat; background-size:100%;">
-        <div class="container-fluid pt-5 pb-4" style="background-image: url(img/model-4.svg); background-position: bottom; background-repeat: no-repeat; background-size:100%;">
+    <section style="background-image: url(img/model-5.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <div class="container-fluid pt-5 pb-4">
             <div class="container mt-5">
                 <div class="row" data-aos="zoom-in">
                     <div class="col-md-12 text-center">
-                        <h2 style="color: white; -webkit-text-stroke: 1px #f9ab2d;"><b>SERVICES</b></h2>
-                        <a href="#" style="color: white;"><button type="button" class="btn btn-outline-danger pl-4 pr-4 mt-3 mb-5">SHOW MORE</button></a>
+                        <h2 style="color: white;"><b>SERVICES</b></h2>
+                        <a href="#" style="color: white;"><button type="button" class="btn btn-outline-light pl-4 pr-4 mt-3 mb-5">SHOW MORE</button></a>
                     </div>
                 </div>
                 <div class="row pb-5">
-                    <div class="col-md-4" data-aos="flip-right">
-                        <div class="">
-                            <div class="card cardbt card_red text-center" style="margin:30px 10px 30px 10px;">
-                                <div>
-                                    <h6 class="card-title"><b>RAPID PROTOTYPING AND SOLUTION ENGINEERING</b></h6>
-                                    <p class="card-text para-white" style="text-align: justify; ">Today’s business world, software is at the core of each company’s ability to create products, systems and services. The demand for tech-savvy, agile software solutions that are both well-integrated and intelligent is on the rise and these innovations become key differentiating factors in a competitive landscape.</p>
-                                    <a href="#" style="color: white;"><button type="button" class="btn btn-outline-dark pl-4 pr-4 mt-3">READ MORE</button></a>
-                                </div>
-                            </div>
+                    <div class="col-md-4" data-aos="slide-up">
+                        <div class="col card text-center shadow-sm white-bg-tech tech-single  pb-3 pt-3 mb-3" data-aos="flip-right">
+                            <h6 class="card-title  pt-2"><b>RAPID PROTOTYPING AND SOLUTION ENGINEERING</b></h6>
+                            <p class="card-text " style="text-align: justify; ">Today’s business world, software is at the core of each company’s ability to create products, systems and services. The demand for tech-savvy, agile software solutions that are both well-integrated and intelligent is on the rise and these innovations become key differentiating factors in a competitive landscape.</p>
+                            <a href="#" style="color: white;"><button type="button" class="btn btn-outline-dark btn-hover pl-4 pr-4 mt-3">READ MORE</button></a>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4" data-aos="slide-up">
+                        <div class="col card text-center shadow-sm white-bg-tech tech-single  pb-3 pt-3 mb-3" data-aos="flip-up">
+                            <h6 class="card-title pt-2"><b>APPLIED RESEARCH AND DEVELOPMENT</b></h6>
+                            <p class="card-text" style="text-align: justify;">We always look forward to solve practical problems of our customers. More specifically, the purpose and context of our applied research is invariably directed to solve problems that are relevant to our customers, while the employed methodology allows for external validation of the suggested / delivered solution.</p>
+                            <a href="#" style="color: white;"><button type="button" class="btn btn-outline-dark btn-hover pl-4 pr-4 mt-3">READ MORE</button></a>
                         </div>
                     </div>
                     <div class="col-md-4" data-aos="slide-up">
-                        <div class="">
-                            <div class="card cardbt card_violet text-center" style="margin:30px 10px 30px 10px;">
-                                <div>
-                                    <h6 class="card-title"><b>APPLIED RESEARCH AND DEVELOPMENT</b></h6>
-                                    <p class="card-text para-white" style="text-align: justify;">We always look forward to solve practical problems of our customers. More specifically, the purpose and context of our applied research is invariably directed to solve problems that are relevant to our customers, while the employed methodology allows for external validation of the suggested / delivered solution.</p>
-                                    <a href="#" style="color: white;"><button type="button" class="btn btn-outline-dark pl-4 pr-4 mt-3">READ MORE</button></a>
-                                </div>
-                            </div>
+                        <div class="col card text-center shadow-sm white-bg-tech tech-single  pb-3 pt-3 mb-3" data-aos="flip-left">
+                            <h6 class="card-title pt-2"><b>PROCESS AUTOMATION AND QUALITY ASSURANCE</b></h6>
+                            <p class="card-text" style="text-align: justify; ">Advancements in machine learning have led to technology leaders pushing for democratization of artificial intelligence, where high-level technologies are available to everyone at an affordable price. Robotics process automation technology goes a long way towards realizing that reality.”</p>
+                            <a href="#" style="color: white;"><button type="button" class="btn btn-outline-dark btn-hover pl-4 pr-4 mt-3">READ MORE</button></a>
                         </div>
                     </div>
-                    <div class="col-md-4" data-aos="flip-left">
-                        <div class="">
-                            <div class="card cardbt card_three text-center" style="margin: 30px 10px 30px 10px;">
-                                <div>
-                                    <h6 class="card-title"><b>PROCESS AUTOMATION AND QUALITY ASSURANCE</b></h6>
-                                    <p class="card-text para-white" style="text-align: justify; ">Advancements in machine learning have led to technology leaders pushing for democratization of artificial intelligence, where high-level technologies are available to everyone at an affordable price. Robotics process automation technology goes a long way towards realizing that reality.”</p>
-                                    <a href="#" style="color: white;"><button type="button" class="btn btn-outline-dark pl-4 pr-4 mt-3">READ MORE</button></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -1151,6 +1175,30 @@
         });
 
         owl.trigger('owl.play', 1500); //owl.play event accept autoPlay speed as second parameter
+        
+        var owl_one = $("#owl-one");
+
+        owl_one.owlCarousel({
+            items: 2, //10 items above 1000px browser width
+            itemsDesktop: [1000, 2], //5 items between 1000px and 901px
+            itemsDesktopSmall: [900, 1], // betweem 900px and 601px
+            itemsTablet: [600, 1], //2 items between 600 and 0
+            itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
+        });
+
+        owl_one.trigger('owl.play', 2000); //owl.play event accept autoPlay speed as second parameter
+
+        var owl_two = $("#owl-two");
+
+        owl_two.owlCarousel({
+            items: 2, //10 items above 1000px browser width
+            itemsDesktop: [1000, 2], //5 items between 1000px and 901px
+            itemsDesktopSmall: [900, 1], // betweem 900px and 601px
+            itemsTablet: [600, 1], //2 items between 600 and 0
+            itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
+        });
+
+        owl_two.trigger('owl.play', 2000); //owl.play event accept autoPlay speed as second parameter
 
     });
 
