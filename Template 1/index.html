@@ -69,17 +69,7 @@
         $(document).ready(function() {
             // Transition effect for navbar 
             var offsetHeight = document.getElementById('myVideo').offsetHeight;
-            $(window).on("scroll", function() {
-                if ($(window).scrollTop()) {
-                    $('.navbar').addClass('navbarblack');
-                    $('.search-button').addClass('btn-outline-info');
-                    $('.navbar').addClass('navbar-dark');
-                    $('.navbar-toggler-icon').addClass('navbar-dark');
-                } else {
-                    $('.navbar').removeClass('navbarblack');
-                    //$('.navbar-toggler-icon').removeClass('navbar-light');
-                    //$('.search-button').removeClass('btn-outline-info');
-                }
+            $(window).on("scroll", function() {                
 
                 if ($(this).scrollTop() > offsetHeight - 10) {
                     $('.navbar').removeClass('navbarblack');
@@ -91,6 +81,10 @@
                     $('.navbar-toggler-icon').removeClass('navbar-dark');
                     $('.navbar-toggler-icon').addClass('navbar-light');
                 } else {
+                    $('.navbar').addClass('navbarblack');
+                    $('.search-button').addClass('btn-outline-info');
+                    $('.navbar').addClass('navbar-dark');
+                    $('.navbar-toggler-icon').addClass('navbar-dark');
                     $('.navbar').removeClass('solid');
                     $('.search-button').removeClass('btn-outline-danger');
                     $('.navbar').removeClass('navbar-light');
@@ -267,7 +261,7 @@
         .dropdown-item,
         .navbar-nav,
         .nav-link {
-            color: #eaeaea;
+            color: white;
         }
 
         .dropdown-item:matches() {
@@ -499,7 +493,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-light fixed-top transparent bg-color">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-light fixed-top transparent bg-color navbarblack">
 
         <!-- Brand -->
         <a class="navbar-brand" href="#"><img class="exception_header" src="img/India_logo_min.png" alt="India Logo"></a>
