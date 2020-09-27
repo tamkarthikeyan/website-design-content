@@ -463,7 +463,7 @@
 </head>
 
 <body>
-
+<div id="loader" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-light fixed-top transparent bg-color">
 
         <!-- Brand -->
@@ -555,53 +555,6 @@
             </video>
         </div>
     </header>
-
-
-
-
-    <!--<section>
-        <div class="container pt-5">
-            <div class="row pt-5 pb-5 mb-5">
-                <div class="col-md-6 pt-4 mb-5" data-aos="flip-down">
-                    <img alt="model-1" src="img/model-1.svg" width="100%" />
-                </div>
-                <div class="col-md-6 text-justify align-self-center pt-5 mb-5" data-aos="zoom-in">
-                    <h5 style="text-align: center; line-height: 170%">MSC Group India is founded on the philosophy of constant innovation that allows for creativity and engineering excellence to support our customers.</h5>
-                    <hr class="my-4" style="height: 2px; width: 100px;" />
-                </div>
-
-                <div class="col-md-4" data-aos="slide-up">
-                    <div class="card cardtt card_red text-center" style="margin:30px 10px 30px 10px;">
-                        <div style="">
-                            <i class="fas fa-desktop icon-fa" aria-hidden="true"></i>
-                            <h6 class="card-title mx-auto w-100"><b>PRODUCT INNOVATION</b></h6>
-                            <p class="card-text para-white" style="text-align: justify">In our line of work, technology is one of the catalytic elements of innovation. Into the new millennium and beyond, innovation has become a directed effort and our company focuses on technology revolutions to innovate for market.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="slide-up">
-                    <div class="card cardtt card_violet text-center" style="margin:30px 10px 30px 10px;">
-                        <div style=" ">
-                            <i class="far fa-eye icon-fa" aria-hidden="true"></i>
-                            <h6 class="card-title"><b>SERVICE INNOVATION</b></h6>
-                            <p class="card-text para-white" style="text-align: justify">Service innovation forms the foundational structure to stay aligned to our customer expectations. While we are a software and systems design and development house, we focus on aligning our activities along a pre-defined set of services.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="slide-up">
-                    <div class="card cardtt card_three text-center" style="margin: 30px 10px 30px 10px;">
-                        <div style="">
-                            <i class="fas fa-flask icon-fa" aria-hidden="true"></i>
-
-                            <h6 class="card-title"><b>PROCESS INNOVATION</b></h6>
-                            <p class="card-text para-white" style="text-align: justify">Product and Service innovations define “what we do” that would help our customer reach their market objectives. On the other hand, Process innovation is all about “how we do.”</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>-->
 
     <section>
         <div class="container">
@@ -1140,6 +1093,21 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/aos.js"></script>
 <script type="text/javascript">
+    
+    document.onreadystatechange = function() {
+        if (document.readyState !== "complete") {
+            document.querySelector(
+                "body").style.visibility = "hidden";
+            document.querySelector(
+                "#loader").style.visibility = "visible";
+        } else {
+            document.querySelector(
+                "#loader").style.display = "none";
+            document.querySelector(
+                "body").style.visibility = "visible";
+        }
+    };
+    
     AOS.init({
         duration: 1200,
         //easing: 'ease-in-out-sine'
