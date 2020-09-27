@@ -1,0 +1,224 @@
+//First-loading-content
+
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace .pace-activity {
+    display: block;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(-0deg, #f76b1c -50%, #fad961 100%);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transform: translateX(100%) translateY(-100%) rotate(45deg);
+    transform: translateX(100%) translateY(-100%) rotate(45deg);
+    pointer-events: none;
+}
+
+.pace.pace-active .pace-activity {
+    -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
+    transform: translateX(50%) translateY(-50%) rotate(45deg);
+}
+
+.pace .pace-activity::before,
+.pace .pace-activity::after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    display: block;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    content: '';
+}
+
+.pace .pace-activity::before {
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    border-right-color: rgba(0, 0, 0, .1);
+    border-left-color: rgba(0, 0, 0, .1);
+    -webkit-animation: pace-theme-corner-indicator-spin 3s linear infinite;
+    animation: pace-theme-corner-indicator-spin 3s linear infinite;
+}
+
+.pace .pace-activity::after {
+    bottom: 50px;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    border-top-color: rgba(0, 0, 0, .1);
+    border-bottom-color: rgba(0, 0, 0, .1);
+    -webkit-animation: pace-theme-corner-indicator-spin 1s linear infinite;
+    animation: pace-theme-corner-indicator-spin 1s linear infinite;
+}
+
+@-webkit-keyframes pace-theme-corner-indicator-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@keyframes pace-theme-corner-indicator-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+//First-loading-content
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+.navbarblack {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.solid {
+    /*background: #666666;*/
+    background-image: linear-gradient(45deg, #f76b1c 5%, #fad961 100%);
+}
+
+.tech-para {
+    text-align: justify;
+    color: #757575;
+}
+
+.tech-para-gray {
+    text-align: justify;
+    color: #585854;
+}
+
+.tech-para-hover {
+    color: #565656;
+}
+
+
+.tech-para-hover:hover {
+    color: #f76b1c;
+    text-decoration: none;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+}
+
+.tech-para-hover-white {
+    color: white;
+}
+
+
+.tech-para-hover-white:hover {
+    color: black;
+    text-decoration: none;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+}
+
+/*.navbarbackgroundcolor {
+    background-color: linear-gradient(45deg, #f76b1c 5%, #fad961 100%) !important;
+}*/
+
+#gototop {
+    display: inline-block;
+    background-color: rgba(76, 76, 76, 0.7);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#gototop::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#gototop:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#gototop:active {
+    background-color: #FF9800;
+}
+
+#gototop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.circle {
+    padding: 25%;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: .5s;
+    text-align: center;
+}
+
+/*-------------------------owl----------------*/
+#owl-demo .item {
+    padding: 30px 5px;
+    margin: 2px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+
+}
+
+.item:hover {
+    transform: scale(1.1);
+}
+
+.customNavigation {
+    text-align: center;
+}
+
+.customNavigation a {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*--------------cardbt-----------------------*/
+
