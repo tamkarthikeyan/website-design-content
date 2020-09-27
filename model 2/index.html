@@ -43,6 +43,7 @@
                     "#loader").style.display = "none";
                 document.querySelector(
                     "body").style.visibility = "visible";
+                $('body').removeClass('load-hidden');
             }
         };
 
@@ -471,19 +472,23 @@
             margin-top: -70px;
             margin-left: -85px;
         }
+        
+        .load-hidden{
+            visibility: hidden;
+        }
 
     </style>
 
 </head>
 
-<body>
+<body class="load-hidden">
     <div id="loader" class="lds-ellipsis">
         <div></div>
         <div></div>
         <div></div>
         <div></div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-light fixed-top transparent bg-color">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top transparent bg-color">
 
         <!-- Brand -->
         <a class="navbar-brand" href="#"><img class="exception_header" src="img/India_logo_min.png" alt="India Logo"></a>
@@ -777,7 +782,7 @@
                 </div>
                 <div class="row pb-5">
                     <div class="col-md-4" data-aos="slide-up">
-                        <div class="col card text-center shadow-sm white-bg-tech tech-single  pb-3 pt-3 mb-3" data-aos="flip-right">
+                        <div class="col card text-center shadow-sm white-bg-tech tech-single  pb-3 pt-3 mb-5 mt-5" data-aos="flip-right">
                             <h6 class="card-title  pt-2"><b>RAPID PROTOTYPING AND SOLUTION ENGINEERING</b></h6>
                             <p class="card-text " style="text-align: justify; ">Today’s business world, software is at the core of each company’s ability to create products, systems and services. The demand for tech-savvy, agile software solutions that are both well-integrated and intelligent is on the rise and these innovations become key differentiating factors in a competitive landscape.</p>
                             <a href="#" style="color: white;"><button type="button" class="btn btn-outline-dark btn-hover pl-4 pr-4 mt-3">READ MORE</button></a>
@@ -785,14 +790,14 @@
 
                     </div>
                     <div class="col-md-4" data-aos="slide-up">
-                        <div class="col card text-center shadow-sm white-bg-tech tech-single  pb-3 pt-3 mb-3" data-aos="flip-up">
+                        <div class="col card text-center shadow-sm white-bg-tech tech-single  pb-3 pt-3 mb-5 mt-5" data-aos="flip-up">
                             <h6 class="card-title pt-2"><b>APPLIED RESEARCH AND DEVELOPMENT</b></h6>
                             <p class="card-text" style="text-align: justify;">We always look forward to solve practical problems of our customers. More specifically, the purpose and context of our applied research is invariably directed to solve problems that are relevant to our customers, while the employed methodology allows for external validation of the suggested / delivered solution.</p>
                             <a href="#" style="color: white;"><button type="button" class="btn btn-outline-dark btn-hover pl-4 pr-4 mt-3">READ MORE</button></a>
                         </div>
                     </div>
                     <div class="col-md-4" data-aos="slide-up">
-                        <div class="col card text-center shadow-sm white-bg-tech tech-single  pb-3 pt-3 mb-3" data-aos="flip-left">
+                        <div class="col card text-center shadow-sm white-bg-tech tech-single  pb-3 pt-3 mb-5 mt-5" data-aos="flip-left">
                             <h6 class="card-title pt-2"><b>PROCESS AUTOMATION AND QUALITY ASSURANCE</b></h6>
                             <p class="card-text" style="text-align: justify; ">Advancements in machine learning have led to technology leaders pushing for democratization of artificial intelligence, where high-level technologies are available to everyone at an affordable price. Robotics process automation technology goes a long way towards realizing that reality.”</p>
                             <a href="#" style="color: white;"><button type="button" class="btn btn-outline-dark btn-hover pl-4 pr-4 mt-3">READ MORE</button></a>
