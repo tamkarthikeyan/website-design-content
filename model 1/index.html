@@ -71,7 +71,7 @@
             var offsetHeight = document.getElementById('myVideo').offsetHeight;
             $(window).on("scroll", function() {
 
-                if ($(this).scrollTop() > offsetHeight - 10) {
+                if ($(this).scrollTop() > offsetHeight) {
                     $('.navbar').removeClass('navbarblack');
                     $('.navbar').addClass('solid');
                     $('.search-button').removeClass('btn-outline-info');
@@ -90,7 +90,7 @@
                     $('.navbar').removeClass('navbar-light');
                     $('.navbar-toggler-icon').removeClass('navbar-light');
                 }
-                if ($(this).scrollTop() > offsetHeight - 10) {
+                if ($(this).scrollTop() > offsetHeight) {
                     $('.dropdown-menu').removeClass('dropdown-menu-navbarblack');
                     $('.dropdown-menu').addClass('dropdown-menu-solid');
                 } else {
